@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+
+<body>
+
+    <input type="text" id="username">
+    <button id="btn">Show</button>
+    <div id="output">
+        <p></p>
+    </div>
+
+    <script>
+        // Question 3 — Display Input Value
+
+        const inp = document.querySelector("#username")
+        const btn = document.querySelector("#btn")
+        const out = document.querySelector("#output")
+
+        btn.addEventListener("click", () => {
+            out.innerHTML += `<p>${inp.value}</p>`
+            inp.value = ""
+        })
+
+
+
+    </script>
+</body>
+
+</html>
