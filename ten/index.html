@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+
+
+    <style>
+        p {
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="image">
+    <button id="btn">Next</button>
+
+
+
+    <script>
+        // Question 10 — Image Gallery
+
+
+        const img = document.querySelector("#image");
+        const btn = document.querySelector("#btn")
+
+        let imgSrc = [
+            "https://images.unsplash.com/photo-1783962211635-ef0af72c7759?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
+            "https://plus.unsplash.com/premium_photo-1783930777039-a40e03688a4f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1779896412200-e1047994622b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8",
+            "https://plus.unsplash.com/premium_photo-1783701176173-4b5687ed44e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1783711394928-f93f63a6bf8e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D"
+        ]
+
+
+        let index = 0
+
+        img.src = imgSrc[index]
+
+
+
+        btn.addEventListener("click", () => {
+            index++
+
+
+            if (index >= imgSrc.length) {
+                index = 0;
+            }
+
+
+            img.src = imgSrc[index]
+        })
+
+    </script>
+</body>
+
+</html>
