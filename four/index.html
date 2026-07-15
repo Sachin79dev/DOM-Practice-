@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+
+
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="message">Hello World</p>
+    <button id="btn">Toggle</button>
+
+    <script>
+        // Question 4 — Hide and Show Text
+
+        const msg = document.querySelector("#message")
+        const btn = document.querySelector("#btn")
+
+        btn.addEventListener("click", () => {
+            msg.classList.toggle("hide")
+        })
+    </script>
+</body>
+
+</html>
