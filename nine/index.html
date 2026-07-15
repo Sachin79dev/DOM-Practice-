@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+
+
+    <style>
+        p {
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="input" type="text">
+    <button id="add">Add</button>
+    <ul id="list"></ul>
+
+
+    <script>
+        // Question 9 — Todo List
+        const inp = document.querySelector("#input")
+        const add = document.querySelector("#add")
+        const list = document.querySelector("#list")
+
+
+        add.addEventListener("click", () => {
+            let inpValue = inp.value
+            const li = document.createElement("li")
+
+            li.textContent = inpValue
+
+            list.appendChild(li)
+
+            inp.value = ""
+        })
+
+    </script>
+</body>
+
+</html>
