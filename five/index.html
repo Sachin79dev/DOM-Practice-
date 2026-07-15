@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+
+
+    <!-- <style>
+        .hide {
+            display: none;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <ul id="list">
+        <li>Apple</li>
+    </ul>
+    <button id="btn">Add Fruit</button>
+
+    <script>
+        // Question 5 — Add New List Item
+
+
+        const list = document.querySelector("#list")
+        const btn = document.querySelector("#btn")
+
+
+        btn.addEventListener("click", () => {
+            const item = document.createElement("li")
+            item.innerHTML = "Banana"
+
+            list.appendChild(item)
+        })
+
+
+    </script>
+</body>
+
+</html>
