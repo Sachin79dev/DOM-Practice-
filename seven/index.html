@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+
+
+    <style>
+        h1 {
+            font-family: cursive;
+            font-size: 60px;
+            padding-left: 20px;
+        }
+
+        .add {
+            background: blue;
+            outline: none;
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+        }
+
+        .del {
+            background: red;
+            outline: none;
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>0</h1>
+    <button class="add" onclick="add()">+</button>
+    <button class="del" onclick="minus()">-</button>
+
+    <script>
+        // Question 7 — Counter App
+
+        const counter = document.querySelector("h1")
+
+        let count = 0
+
+        function add() {
+            counter.innerHTML = ++count
+        }
+
+
+        function minus() {
+            if (count <= 0) {
+                return
+            }
+            counter.innerHTML = --count
+        }
+
+    </script>
+</body>
+
+</html>
