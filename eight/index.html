@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+
+
+    <style>
+        p {
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body>
+
+    <textarea id="text"></textarea>
+    <p>Characters: <span>0</span></p>
+
+    <script>
+        // Question 8 — Live Character Counter
+
+        const container = document.querySelector("#text")
+        const num = document.querySelector("span")
+
+        
+        
+
+        container.addEventListener("input", () => {
+            let count = container.value.length
+            num.innerHTML = count
+            
+        })
+
+    </script>
+</body>
+
+</html>
